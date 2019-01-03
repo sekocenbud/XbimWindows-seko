@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="Xbim.Presentation.IfcActionPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Xbim.Presentation"    
+	     Name="ActionPanelSeko"
+             >
+    <UserControl.Resources>
+          <local:ListToStringConverter x:Key="ListToStringConverter" />
+		<!--<local:tcpMsg x:Key="tcpMsg" />-->
+	</UserControl.Resources>
+
+    <!--<TabControl x:Name="ActionPane" FontSize="10">
+        <TabItem x:Name="ActionPanelTab">-->
+            <!--<Grid x:Name="ActionGrid" ShowGridLines="false">-->
+	<Grid x:Name="ActionPane" ShowGridLines="false" Background="white">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="220"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="90"></RowDefinition>
+		</Grid.RowDefinitions>
+		<DockPanel Grid.Row="0" >
+			<Border BorderThickness="0,0,0,1" BorderBrush="Silver">
+				<StackPanel Grid.Row="1" Width="Auto" Orientation="Vertical">
+					<StackPanel Orientation="Horizontal">
+						<StackPanel Margin="1" Orientation="Vertical">
+							<StackPanel Orientation="Horizontal">
+								<Label FontSize="10" VerticalAlignment="Center" Width="69">Wysokość</Label>
+								<TextBox x:Name="fieldWysokosc" TextAlignment="Right" Width="100" FontSize="10" IsEnabled="false"></TextBox>
+								<Button x:Name="btnWysokosc" BorderThickness="1" HorizontalAlignment="Right" Click="Button_Click" FontSize="10">+</Button>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<Label FontSize="10" VerticalAlignment="Center" Width="69">Szerokość</Label>
+                                <TextBox x:Name="fieldSzerokosc" TextAlignment="Right" Width="100" FontSize="10" IsEnabled="False"></TextBox>
+								<Button x:Name="btnSzerokosc" HorizontalAlignment="Right" Click="BtnSzerokosc_Click" FontSize="10">+</Button>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<Label FontSize="10" VerticalAlignment="Center" Width="69">Objętość</Label>
+                                <TextBox x:Name="fieldObjetosc" TextAlignment="Right" Width="100" FontSize="10" IsEnabled="False"></TextBox>
+								<Button x:Name="btnObjetosc" BorderThickness="1" HorizontalAlignment="Right" Click="BtnObjetosc_Click" FontSize="10">+</Button>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<Label FontSize="10" VerticalAlignment="Center" Width="69">Powierzchnia</Label>
+								<TextBox x:Name="fieldPowierzchnia" TextAlignment="Right" Width="100" FontSize="10" IsEnabled="False"></TextBox>
+								<Button x:Name="btnPowierzchnia" HorizontalAlignment="Right" Click="BtnPowierzchnia_Click" FontSize="10">+</Button>
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Orientation="Vertical" Height="90">
+						<Label FontSize="10">Obliczenia</Label>
+						<!--<ScrollViewer CanContentScroll="True" IsDeferredScrollingEnabled="True" VerticalScrollBarVisibility="Visible">-->
+							<TextBox x:Name="fieldObliczenia" IsEnabled="True" Height="60" FontSize="10" Padding="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"></TextBox>
+						<!--</ScrollViewer>-->
+					</StackPanel>
+					<StackPanel Orientation="Vertical" Margin="0,0,0,10">
+						<Button x:Name="btnWstawDoKalkulacji" Margin="20,5,20,5" Padding="3" Grid.Row="0" Click="BtnWstawDoKalkulacji_Click" FontSize="10">Wstaw do kalkulacji</Button>
+					</StackPanel>
+				</StackPanel>
+			</Border> 
+		</DockPanel>
+		<DockPanel Grid.Row="1">
+			<Border BorderThickness="0,0,0,1" BorderBrush="Silver">
+				<StackPanel Orientation="Vertical">
+					<StackPanel DockPanel.Dock="Left">
+						<Button x:Name="btnUstaw" Margin="20,5,20,5" Click="BtnUstaw_Click" FontSize="10" IsEnabled="true">Ustaw</Button>
+						<!--<CheckBox IsChecked="True" VerticalAlignment="Bottom" FontSize="10" Margin="0,0,0,10">Automatycznie</CheckBox>-->
+					</StackPanel>
+				</StackPanel>
+			</Border>
+		</DockPanel>
+		<DockPanel Grid.Row="2">
+			<Border BorderThickness="0,0,0,1" BorderBrush="Silver" Margin="0,0,0,10">
+				<StackPanel Orientation="Vertical" Margin="0,0,0,10">
+					<Button x:Name="btnZoomIn" Margin="20,5,20,5" Width="Auto" Click="BtnZoomIn_Click" FontSize="10">Powiększ wybrane</Button>
+					<Button x:Name="btnShowAll" Margin="20,5,20,5" Width="Auto" Click="BtnShowAll_Click" FontSize="10">Pokaż wszystko</Button>
+				</StackPanel>	
+			</Border>
+		</DockPanel>
+		<DockPanel Grid.Row="3">
+			<Border BorderThickness="0,0,0,1" BorderBrush="Silver">
+				<StackPanel Orientation="Vertical">
+					<Label FontSize="10">Komunikacja</Label>
+					<!--<TextBlock x:Name="fieldCommunication" Text="{Binding Source={StaticResource IfcActionPanel}, Path=tcpMsg,Converter={StaticResource ListToStringConverter}, Mode=OneWay}" FontSize="10"></TextBlock>-->
+					<TextBox x:Name="fieldCommunication" Text="{Binding ElementName=ActionPanelSeko, Path=tcpMsg}" Height="60" FontSize="10" Padding="3" TextWrapping="Wrap" Background="black" Foreground="white"></TextBox>
+				</StackPanel>	
+			</Border>
+		</DockPanel>
+	</Grid>
+	<!--</TabItem>
+    </TabControl>-->
+</UserControl>

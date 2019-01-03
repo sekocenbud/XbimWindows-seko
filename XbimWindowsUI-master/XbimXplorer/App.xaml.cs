@@ -17,6 +17,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using Xbim.IO.Esent;
+using Xbim.Presentation;
 
 #endregion
 
@@ -27,11 +28,11 @@ namespace XbimXplorer
     /// </summary>
     public partial class App
     {
-        /// <summary>
-        /// Raises the <see cref="E:System.Windows.Application.Startup"/> event.
-        /// </summary>
-        /// <param name="e">A <see cref="T:System.Windows.StartupEventArgs"/> that contains the event data.</param>
-        protected override void OnStartup(StartupEventArgs e)
+		/// <summary>
+		/// Raises the <see cref="E:System.Windows.Application.Startup"/> event.
+		/// </summary>
+		/// <param name="e">A <see cref="T:System.Windows.StartupEventArgs"/> that contains the event data.</param>
+		protected override void OnStartup(StartupEventArgs e)
         {
             // evaluate special parameters before loading MainWindow
             var blockPlugin = false;

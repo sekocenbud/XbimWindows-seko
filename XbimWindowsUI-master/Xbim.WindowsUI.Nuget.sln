@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xbim.Presentation", "Xbim.Presentation\Xbim.Presentation.csproj", "{89F98E53-DE4E-4427-8244-D5934AD08849}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XplorerPlugin.Bcf", "XplorerPlugin.Bcf\XplorerPlugin.Bcf.csproj", "{935963BB-7EE9-4C8F-BC60-DE43961F2E98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{645DE1B1-90B9-4B04-8F65-F6C81B046B23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTcpClient", "ConsoleTcpClient\ConsoleTcpClient.csproj", "{2666C3BA-A4F1-44A2-9F15-4F064C3F3974}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,11 +45,18 @@ Global
 		{645DE1B1-90B9-4B04-8F65-F6C81B046B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{645DE1B1-90B9-4B04-8F65-F6C81B046B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{645DE1B1-90B9-4B04-8F65-F6C81B046B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2666C3BA-A4F1-44A2-9F15-4F064C3F3974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2666C3BA-A4F1-44A2-9F15-4F064C3F3974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2666C3BA-A4F1-44A2-9F15-4F064C3F3974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2666C3BA-A4F1-44A2-9F15-4F064C3F3974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{935963BB-7EE9-4C8F-BC60-DE43961F2E98} = {0A25F1E8-AAD2-4E93-B1AE-E50FCE26CB2C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8B7A563-A7B9-4217-B903-18EDBCE7D124}
 	EndGlobalSection
 EndGlobal

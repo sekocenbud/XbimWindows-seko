@@ -66,6 +66,10 @@
     <NoWarn>1591;1572;1573;1574</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ConsoleTcpClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5603cab1bd02d7fd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ConsoleTcpClient\obj\Release\ConsoleTcpClient.dll</HintPath>
+    </Reference>
     <Reference Include="Esent.Interop, Version=1.9.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\ManagedEsent.1.9.4\lib\net40\Esent.Interop.dll</HintPath>
       <Private>True</Private>
@@ -202,6 +206,9 @@
     </Compile>
     <Compile Include="IfcGroupsViewModel.cs" />
     <Compile Include="HistoryCollection.cs" />
+    <Compile Include="IfcActionPanel.xaml.cs">
+      <DependentUpon>IfcActionPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IfcMetaDataControl.xaml.cs">
       <DependentUpon>IfcMetaDataControl.xaml</DependentUpon>
     </Compile>
@@ -260,9 +267,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IfcMetaDataControl.xaml">
+    <Page Include="IfcActionPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IfcMetaDataControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Generic.xaml">
       <SubType>Designer</SubType>
